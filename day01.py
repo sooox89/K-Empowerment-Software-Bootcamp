@@ -1,19 +1,8 @@
-# 교재 딕셔너리 예제
+import tkinter as tk
 
-subjects = {
-    '의사소통 영어' : 'A+', '오래된 미래' : 'B+', '양자역학' : 'A0'}
+win = tk.Tk()
+win.geometry ('400x300')
+win.mainloop()
 
-student = '김도훈'
-subject = '오래된 미래'
-print(student, '학생의', subject, '과목 성적은', subjects['오래된 미래'], '입니다')
+#the command line in a monitor or terminal window
 
-# 놓침,list
-
-# old style
-print("%s 학생의 %s 과목 성적은 %s입니다" % (student, subject, subjects[subject]))
-
-#modern style (format 함수)
-print("{2} 학생의 {1} 과목성적은 {0}입니다". format(student, subject, subjects[subject]))
-#print ("{} 학생의 {}
-#f string
-print(f'{student} 학생의 {subject} 과목 성적은 {subjects[subject]}입니다')
