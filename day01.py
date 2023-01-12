@@ -1,7 +1,15 @@
-# (100°F − 32) × 5/9 = 37.778°C
-fahrenheit = float(input('화씨 온도 : '))
-# 변수 : 가독성 좋게 설정, 의미를 알 수 있게 (fahrenheit=fh,etc)
-celsius = (fahrenheit - 32.0) * (5.0/9.0)
-# print(celsius)
-# print(f'화씨 온도 {fahrenheit}도는 섭씨 온도{celsius}입니다')
+# for countdown in 5, 4, 3, 2, 1, "hey!":
+#    print(countdown)
+# print (' 프로그램 종료')
+
+countdown_list = [5, 4, 3, 2, 1, "hey!"]
+for countdown in countdown_list:
+    print(countdown)
+print('프로그램 종료')
+
+countdown_list = [5, 4, 3, 2, 1, "hey!"]
+for countdown in countdown_list:
+    print(countdown)
+print(countdown_list[3])
+# 인덱스, 오프셋
 
