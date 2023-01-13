@@ -1,43 +1,51 @@
-harry_porter = {'헤르미온느': '그리핀도르', '말포이': '슬리데린', '론' : '그리핀도르'}
-print(harry_porter)
-print(type(harry_porter))
+##Chap 4 if
 
-math_values = (3.14, 2.71)
-print(f'원주율의 값은 {math_values[0]}이고 타입은 {type(math_values)}입니다')
-math_values[0] = 9.99
-print(f'원주율의 값은 {math_values[0]}이고 타입은 {type(math_values)}입니다')
+limits = 20
+tweets = "pass" *  4
+if limits - len(tweets) >= 0 :
+    print(tweets)
+else :
+    print('제한 글자 수 초과')
 
-print(2**5)
-print(pow(2,5))
-print(divmod(9,5))
-print(type(divmod(9,5)))
-print(type(1,2))
-test = 1,2 #packing
-print(type(test))
-print(test)
-print(test[1])
-a, b, c = test #unpacking
-print(a)
-print(b)
+
+limits = 20
+tweets = "pass" *  6
+diff = limits - len (tweets)
+if diff >= 0:
+    print(tweets)
+# if diff := limits - len(tweets) >= 0 :
+
+else :
+    print(f'글자수 {abs(diff)}초과')
 
 
 
-number = 0b10011010
-print(number)
-
-number = 0x9A
-print(number)
-
-number= 0o232
-print(number)
-
-number = 154
-print(bin(number))
-print(hex(number))
-print(oct(number))
 
 
-print(ord(" "))  ##ascii
-print(hex(print(ord(" "))))   ##
+print(bool([]))
+print(bool([set()]))
+print(bool([dict()]))
 
+a= []
+print(bool(a))
+a.append(5)
+print(bool(a))
+print(bool([set()]))
+print(bool([dict()]))
+
+
+vowels ='aeiou'
+letter = 'x'
+if letter in vowels:
+    print("실행안됨")
+
+vowels ='aeiou'
+letter = 'u'
+if letter in vowels:
+    print("실행 됨 !")
+
+vowels ='aeiou'
+letter = 'u'
+if letter not in vowels:
+    print("실행 안됨")
 
