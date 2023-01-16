@@ -56,3 +56,4 @@ if is_prime:
     print('f{number} is prime number!')
 else:
     print('f{number} is NOT prime number!')
+
