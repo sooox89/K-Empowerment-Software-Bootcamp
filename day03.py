@@ -62,3 +62,59 @@ inha = 'a duck goes into a sea'
 print(inha.replace('a', 'a nice'))    # a nice duck goes into a nice sea nice
 print(inha.replace('a ', 'a nice '))   # a niceduck goes into a nicesea
 
+#strip 함수
+subjects = '  python, data structure, database  '
+print(subjects.strip()) ##python, data structure, database
+print(subjects)         ##  python, data structure, database
+
+subjects = '  python, data structure, database   $'
+print(subjects.strip())
+print(subjects)
+
+subjects = ' $ python, data structure, database   $$$'
+print(subjects.count('data'))
+print(subjects.rfind('data'), subjects.rindex('data'))    ## 문자열 끝에서 시작
+print(subjects.find('inha'))  ## 못찾으면 -1을 반환
+# print(subjects.index('inha')) ## 못찾으면 예외 발생
+print(subjects.isalnum())
+print(subjects.title())
+
+# old style format
+# new style format
+
+# pp.134 연습문제 5.1 m으로 시작하는 단어를 대문자로 만들어라 (starting with m)
+song =  """When an eel grabs your arm,
+... And it causes great harm,
+... That's a - moray!"""
+
+idx = song.find('m')
+print(idx, song[idx].upper())
+
+# song = song.replace('m','M')
+# print(song)
+# idx = song.rfind('m')
+# song = song.replace(song[idx],song[idx].upper())
+
+song_list = song.split()
+print(song_list)
+song_list[14] = song_list[14].title()
+song_string = ' '.join(song_list)
+print(song_string)
+
+## 모르게쒀...
+# 연습문제 5.2번 >> 교수님 github clone ㄲㄲ
+
+questions = [
+    "We don't serve stings around here.~~~"
+]
+
+# 연습문제 5.3번
+
+print("My kitty cat likes %s,\nMy kitty cat fell on his %s, \nAnd now thinks he 's a %s." % ('roast beef','ham','head'))
+
+#My kitty cat likes roast beef,
+#My kitty cat fell on his ham,
+#And now thinks he 's a head.
+
+
+
