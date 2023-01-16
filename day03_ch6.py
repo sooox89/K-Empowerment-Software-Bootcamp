@@ -1,59 +1,44 @@
+# input 2 numbers
 
-#while, for문 교수님예제
-#prime number
+#start = int(input("start number : "))
+#end = int(input("end number : "))
+#print(start, end)
 
+#start_end = input("start and end number: "). split()
+#print(start_end)
+#print(int(start_end[0]), int(start_end[1]))
 
-#while문 ver.1
-number = int(input("input number: "))
-counts = 0
-
-k = 1
-while k <= number:
-    if number % k == 0:
-        counts = counts + 1      # counts += 1
-    k = k + 1
-if counts == 2:
-    print('f{number} is prime number!')
-else:
-    print('f{number} is NOT prime number!')
-
-#for문 ver.2
-number = int(input("input number: "))
-counts = 0
-
-for k in range(1, number+1):
-    if number % k == 0:
-        counts = counts + 1
-if counts == 2:
-    print('f{number} is prime number!')
-else:
-    print('f{number} is NOT prime number!')
+#start = int(input("start number : "))
+#end = int(input("end number : "))
+#print(start, end)
+#for k in range(start, end+1):
+#    print(k, end=' ')      #' '띄어쓰기로 구분  # '/'를 넣었다면 /로 구분됨
 
 
-# ver.3
-number = int(input("input number: "))
-counts = 0
+#prime number new ver.
 
-for k in range(1, number + 1):
-    if number % k == 0:
-        counts = counts + 1
-if counts:
-    print('f{number} is prime number!')
-else:
-    print('f{number} is NOT prime number!')
+#for문
 
-# ver.4
-number = int(input("input number :"))
-is_prime = True   #변수 boolean 타입으로
+start = int(input("input start number : "))
+end = int(input("input end number : "))
 
-for k in range(2, number):
-    if number % k ==0:
-        is_prime = False
-        break
-    print(k)
+if end < start:
+    start,end = end, start
 
-if is_prime:
-    print('f{number} is prime number!')
-else:
-    print('f{number} is NOT prime number!')
+for i in range(start,end+1):
+    # is_prime = True
+
+    if i <= 1:
+        continue     # break 안됨
+    for k in range(2,i):
+        if i % k == 0:
+            is_prime = False
+            break
+    else:
+        print(i, end= ' ')
+
+#while문
+
+
+
 
