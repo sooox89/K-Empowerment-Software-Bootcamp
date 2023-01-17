@@ -39,6 +39,14 @@ b = copy.deepcopy(a)
 a[2][1] = 7  #mutable,deepcopy
 print(a,b)     ##[1, 2, [8, 7]] [1, 2, [8, 9]]
 
+a = [1,2,[5,-9]]
+b = a.copy()
+c = list(a)
+d = a[:]
+a[1] = -77   # immutable
+a[2][1] = 7  # 
+print(a,b,c,d)
+
 
 #primes = [2, 19, 3.0, 5, 7, 11]
 #print(primes)
