@@ -1,15 +1,12 @@
-# list comprehension / generator comprehension
-odd_lists = [ i for i in range(1,11) if i % 2 == 1]
-odd_tuples = (i for i in range(1,11) if i % 2 == 1)
-
-#print(odd_tuples, type(odd_tuples))  ##<class 'generator'>
-#print(odd_lists, type(odd_lists))    ##[1, 3, 5, 7, 9] <class 'list'>
-
-
-#odd_lists = []
-#for i in range(1,11):
-#    if i % 2 == 1:
-#        odd_lists.append(i)
-#print(odd_lists)
-
+#p.175 ex 7-4
+#things = [ "mozzarella","cinderella","salmonella" ]
+#print(things)
+# ex 7-5
+things = [ "mozzarella","cinderella","salmonella" ]
+things[-2] = things[-2].title()
+print(things)
+things[0] = things[0].upper()
+print(things)
+print(f'Delete the {things.pop()} from things, get Nobel Prize')
+print(things)
 
