@@ -1,12 +1,14 @@
-#p.175 ex 7-4
-#things = [ "mozzarella","cinderella","salmonella" ]
-#print(things)
-# ex 7-5
-things = [ "mozzarella","cinderella","salmonella" ]
-things[-2] = things[-2].title()
-print(things)
-things[0] = things[0].upper()
-print(things)
-print(f'Delete the {things.pop()} from things, get Nobel Prize')
-print(things)
+#Ch8 dictionary
+
+students = {'name' : 'Kim inha', 'age' : 23, 'eyes' : [0.9,1.1] }
+#for k in students.keys():
+#for k in students:
+#for k in students.values():
+#   print(k)
+
+for k, v in students.items():
+    print(f'{k} : {v}')
+print(f'이름은 {students["name"]}, 나이는 {students["age"]}', end=' ')
+print(f'시력은 좌: {students["eyes"][0]}, 우 : {students["eyes"][1]}')
+
 
