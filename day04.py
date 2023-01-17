@@ -21,9 +21,10 @@ while True:
     elif alcohol == '4':
         print(f'고량주에 어울리는 안주는 {alcohol_foods["고량주"]}입니다')
     else:
-        print('')
-print(alcohol)
+        print('메뉴에서 골라주세요')
 
+
+##
 
 alcohol_list = list(alcohol_foods) #extract keys
 while True:
@@ -40,6 +41,5 @@ while True:
     elif alcohol == '4':
             print(f'{alcohol_list[3]}에 어울리는 안주는 {alcohol_foods[alcohol_list[3]]}입니다')
     else:
-            print('')
-    print(alcohol)
+            print('메뉴에서 골라주세요')
 
