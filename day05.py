@@ -1,37 +1,19 @@
-# Ch9 함수 fuction
-#
-# def inha(): #return도 없음
-#     '''
-#     숫자 출력 함수
-#     :return:
-#     '''
-#     print(60)
-#
-# def call_func(f):
-#     '''
-#     매개변수로 함수를 넘겨 받아 실행
-#     :param f: 매개변수가 함수
-#     :return:
-#     '''
-#     f()  # 넘겨 받은 함수 실행
-#
-# call_func(inha)
-# print(type(call_func))
+#ch9
+#closures
 
-def subtract(n1,n2):'''
+def calculate():
+    x = 1
+    y = 2
+    temp = 0
+    def add_sub(n):
+        nonlocal temp
+        # x = 11   #local variable
+        temp = temp + x + n - y
+        return temp
+    return add_sub
 
-    :param n1: 
-    :param n2: 
-    :return: 
-    '''
-    print(n1-n2)
+c1 = calculate()       #calculate함수를 call
+for i in range(5):     #range(5)=1~4
+    print(c1(i))
 
-def run_function(fuction,arg1,arg2): '''
 
-    :param fuction: 첫 번쨰 인수는 함수
-    :param arg1: 정수 값
-    :param arg2: 정수 값
-    :return: 
-    '''
-    fuction(arg1,arg2)
-run_function(subtract,99,88)
