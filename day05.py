@@ -1,22 +1,23 @@
 #ch9
-#closures
+#lambda//
 
-def calculate():
-    x = 1
-    y = 2
-    temp = 0
-    def add_sub(n):
-        nonlocal temp
-        # x = 11   #local variable
-        temp = temp + x + n - y
-        return temp
-    return add_sub
+import random
+def process(no_list, f):
+    for no in no_list:
+        print(f(no))
 
-c1 = calculate()       #calculate함수를 call
-for i in range(5):     #range(5)=1~4
-    print(c1(i))
 
-print(type(c1))
-print(c1)
+## fuction as parameter
+# def squares(n):
+#     '''
+#     제곱 함수
+#     :param n:
+#     :return:
+#     '''
+#     return n * n
 
+numbers = [random.randint(1,100) for i in range(5)]
+print(numbers)
+# process(numbers, squares)
+process(numbers, lambda x: x * x)  #lambda
 
