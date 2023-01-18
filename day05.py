@@ -1,31 +1,28 @@
 # Ch9 함수 fuction
 
-#is_prime 함수 만들어보기 !
+# def do_nothing():
+#     pass
+#
+# mamamoo = ['화사', '솔라', '휘인', '문별']
+# #print(mamamoo.pop())              ##문별  / 삭제할 값 리턴 후 삭제
+# print(mamamoo.remove('문별'))       ##none / 삭제만 함. 따라서 print함수는 리턴할 값이 없음
+# print(mamamoo)
 
-def isprime(n):
-
+def calculate_fee(*args):
     '''
-    매개변수로 받은 정수가 소수인지 여부를 판정하는 함수
-    :param n: integer number
-    :return: true or false
+    놀이공원 요금 계산 프로그램
+    :param args: ages
+    :return: 지불할 총 입장료
     '''
 
-    if n <= 1:
-        return False
-    for k in range(2,n):
-        if n % k == 0:
-            return False
-    else:
-        return True
-#print(isprime(77))
-#help(isprime)  ##주석처리의 함수 설명 나옴
-start = int(input("input start number : "))
-end = int(input("input end number : "))
+    total = 0
+    for age in args:
+        if 9 <= age : #adult
+            total = total + 10000
+        else:
+            total = total + 3000
+    return total
 
-if end < start:
-    start,end = end, start
-
-for i in range(start,end+1):
-    if isprime(i):
-        print(i, end=' ')
+print(calculate_fee(20,20,25))
+print(calculate_fee(45,43,10,7))
 
