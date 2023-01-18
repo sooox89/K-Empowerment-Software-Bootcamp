@@ -1,29 +1,37 @@
 # Ch9 함수 fuction
-#ver.2 놀이공원 요금 계산 프로그램
-# v0.2 return Dictionary
-import random
+#
+# def inha(): #return도 없음
+#     '''
+#     숫자 출력 함수
+#     :return:
+#     '''
+#     print(60)
+#
+# def call_func(f):
+#     '''
+#     매개변수로 함수를 넘겨 받아 실행
+#     :param f: 매개변수가 함수
+#     :return:
+#     '''
+#     f()  # 넘겨 받은 함수 실행
+#
+# call_func(inha)
+# print(type(call_func))
 
+def subtract(n1,n2):'''
 
-def calculate_fee(args) -> dict:
-    """
-    놀이공원 요금 계산 프로그램
-    :param args: ages in list
-    :return: {'no_of_people':전체 인원 수, 'no_of_adult':어른 수, 'no_of_kid':아이 수, 'total_fee':지불할 총 입장료}
-    """
-    total = 0
-    adults = 0
-    kids = 0
-    for age in args:
-        if 19 <= age:  # adult
-            total = total + 10000
-            adults = adults + 1
-        else:
-            total = total + 3000
-            kids = kids + 1
-    return {'no_of_people': len(args), 'no_of_adult': adults, 'no_of_kid': kids, 'total_fee': total}
+    :param n1: 
+    :param n2: 
+    :return: 
+    '''
+    print(n1-n2)
 
-help(len)
-no_of_visitor = int(input('몇 분 이세요? '))
-ages = [random.randint(1, 60) for age in range(no_of_visitor)]
-results = calculate_fee(ages)
-print(f"{results['no_of_people']}명 방문 하셨고 어른 {results['no_of_adult']}명, 아이 {results['no_of_kid']}명 총 요금은 {results['total_fee']}원 입니다")
+def run_function(fuction,arg1,arg2): '''
+
+    :param fuction: 첫 번쨰 인수는 함수
+    :param arg1: 정수 값
+    :param arg2: 정수 값
+    :return: 
+    '''
+    fuction(arg1,arg2)
+run_function(subtract,99,88)
