@@ -18,7 +18,7 @@ class Pikachu(Pokemon): #inheritance
     pass
 
 pi1= Pikachu('피카츄', '덴트', '번개')
-pi1.info()    ##?
+pi1.info()    ##??
 
 p1 = Pokemon('피카츄', '한지우', '50만 볼트/100만 볼트/번개')
 p2 = Pokemon('꼬부기', '양수경', '우하하/배고파/날룸')
