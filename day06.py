@@ -1,29 +1,9 @@
-#9-2 prof ##generating
-cnts = 0 #counts = 0
-def get_odds():
-    for num in range(10):
-        if num  % 2 == 1:
-            yield num
-
-odds = get_odds()
-for i in odds:
-    cnts +=1   ##counts 루프 돌면서 +1
-    if cnts == 3:
-        print(i)
-
-# def get_odds(first=0,last=10,step=1):
-#
-#
-#
-# #ex 9-1
-#
-# def good():
-#
-#
-#
-#
-# #ex 9-2
-# import random
-# def get_odds(odds):
-#     for odds in range(10):
-#         odds % 2 == 1
+#ch 10 객체 class
+# 스트링 타입으로 순회해서 ㄲ 빅뱅 리스트에서 승리만 pop
+groups = {
+    '빅뱅' : ['GD','태양','탑','대성', '승리'] , '마마무' : ['문별','솔라','휘인','화사']
+}
+for group in groups.values():
+    p
+    group[0].pop()
+    print(group)
