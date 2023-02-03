@@ -1,20 +1,21 @@
-# code03-01
+# code 03-02
 
-pokemons = list() # 빈 배열
+def insert_data(idx, pokemon):
+    if idx < 0 or idx > len(pokemons):
+        print("out of range !")
+        return
 
+    pokemons.append(None)  # 빈칸 추가
 
-def add_data(pokemon):
-    pokemons.append(None)
+    for i in range(len(pokemons) - 1, idx, -1):
+        pokemons[i] = pokemons[i - 1]
+        pokemons[i - 1] = None
 
-    # pokemons[len(pokemons) - 1] = pokemon
-    pokemons[-1] = pokemon
+    pokemons[idx] = pokemon  # 지정한 위치에 친구 추가
 
-
-add_data('다현')
-add_data('정연')
-add_data('쯔위')
-add_data('사나')
-add_data('지효')
-
-print(pokemons)
-
+if __name__ == "__main__":
+    pokemons = ["피카츄", "라이츄", "꼬부기", "파이리", "이상해"]
+    insert_data(2, '거북왕')
+    print(pokemons)
+    insert_data(6, '어니부기')
+    print(pokemons)
