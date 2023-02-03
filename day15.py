@@ -6,12 +6,13 @@ def print_poly(px):
 
     for i in range(len(px)):
         coef = px[i]  # 계수
-        if coef <= 0:
-            poly_str += "+"
-        if coef == 0:
+        if i > 0 and  coef > 0:
+            poly_str = poly_str + "+"
+
+        elif coef == 0:
             term = term - 1
             continue
-        poly_str = poly_str + f'{coef}x^{term}'
+        poly_str = poly_str + f'{coef}x^{term} '
         term = term - 1
 
 
@@ -31,7 +32,7 @@ def cal_ploy(x_val, px):
 
 
 ## 전역 변수 선언 부분 ##
-px = [3, -4, 0, 6]  # = 7x^3 -4x^2 +0x^1 +5x^0
+px = [3, -4, 0, 6]  # = 3x^3 -4x^2 +0x^1 +6x^0
 
 ## 메인 코드 부분 ##
 if __name__ == "__main__":
