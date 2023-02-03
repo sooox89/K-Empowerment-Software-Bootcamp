@@ -1,6 +1,11 @@
 # code 03-05
 
 def print_poly(px):
+    """
+    다항식을 포맷에 맞게 출력하는 함수
+    :param px: 계수를 원소로 가지고 있는 list
+    :return px : 다항식 문자열
+    """
     term = len(px) - 1  # 최고차항 숫자 = 배열길이-1
     poly_str = "P(x) = "
 
@@ -20,6 +25,12 @@ def print_poly(px):
 
 
 def cal_ploy(x_val, px):
+    """
+    다항식의 산술연산을 하는 함수
+    :param x_val: x 값 integer
+    :param px: 계수를 원소로 가지고 있는 list
+    :return: 다항식 계산 결과 값 integer
+    """
     ret_value = 0
     term = len(px) - 1  # 최고차항 숫자 = 배열길이-1
 
@@ -36,8 +47,7 @@ px = [3, -4, 0, 6]  # = 3x^3 -4x^2 +0x^1 +6x^0
 
 ## 메인 코드 부분 ##
 if __name__ == "__main__":
-    pStr = print_poly(px)
-    print(pStr)
+    print(print_poly(px))
 
     x_value = int(input("X값 : "))
 
