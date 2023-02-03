@@ -1,10 +1,13 @@
+# code03-01
+
 pokemons = list() # 빈 배열
 
 
 def add_data(pokemon):
     pokemons.append(None)
-    kLen = len(pokemons)
-    pokemons[kLen - 1] = pokemon
+
+    # pokemons[len(pokemons) - 1] = pokemon
+    pokemons[-1] = pokemon
 
 
 add_data('다현')
