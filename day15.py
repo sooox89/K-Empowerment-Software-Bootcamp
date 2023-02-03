@@ -15,7 +15,9 @@ def insert_data(idx, pokemon):
 
 if __name__ == "__main__":
     pokemons = ["피카츄", "라이츄", "꼬부기", "파이리", "이상해"]
-    insert_data(2, '거북왕')
+    # insert_data(2, '거북왕')
+    pokemons.insert(2,'거북왕')
     print(pokemons)
-    insert_data(6, '어니부기')
+    # insert_data(6, '어니부기')
+    pokemons.insert(6,'어니부기')
     print(pokemons)
