@@ -1,48 +1,41 @@
-# # 응용예제 1
-
-# kakao = [('배고파',200),('집가고싶어',150),('피자',90),('어니부기',30),('날룸퍼프',15)]
-# comment_val = int(input("많이 한 말--> "))
-# count_val = int(input("횟수--> "))
-# print(kakao)
-
-
+# 응용예제 2
 ## 함수 선언 부분 ##
-def find_and_insert_data(friend, k_count) :
-	findPos = -1
-	for i in range(len(katok)) :
-		tuple_pair = katok[i]
-		if k_count >= tuple_pair[1] :
-			findPos = i
-			break
-	if findPos == -1 :
-		findPos = len(katok)
+def printPoly(px):
+	poly_str = "P(x) = "
 
-	insert_data(findPos, (friend, k_count))
+	for i in range(len(px[0])):
+		term = px[0][i]	# 항 차수
+		coef = px[1][i]	# 계수
+
+		if (coef >= 0):
+			poly_str += "+"
+		poly_str += str(coef) + "x^" + str(term) + " "
+
+	return poly_str
 
 
-def insert_data(position, friend):
-	if position < 0 or position > len(katok):
-		print("데이터를 삽입할 범위를 벗어났습니다.")
-		return
+def calcPoly(xVal, p_x):
+	ret_value = 0
 
-	katok.append(None)	# 빈 칸 추가
-	kLen = len(katok)		# 배열의 현재 크기
+	for i in range(len(p_x[0])):
+		term = p_x[0][i]	# 항 차수
+		coef = p_x[1][i]	# 계수
+		ret_value += coef * xValue ** term
+		term -= 1
 
-	for i in range(kLen - 1, position, -1):
-		katok[i] = katok[i - 1]
-		katok[i - 1] = None
-
-	katok[position] = friend
+	return ret_value
 
 
 ## 전역 변수 선언 부분 ##
-katok = [('다현', 200), ('정연', 150), ('쯔위', 90), ('사나', 30), ('지효', 15)]
+px = [ [300, 20, 0],
+		[7, -4, 5] ]
 
 ## 메인 코드 부분 ##
 if __name__ == "__main__":
+	pStr = printPoly(px)
+	print(pStr)
 
-	while True:
-		data = input("추가할 친구--> ")
-		count = int(input("카톡 횟수--> "))
-		find_and_insert_data(data, count)
-		print(katok)
+	xValue = int(input("X 값-->"))
+
+	pxValue = calcPoly(xValue, px)
+	print(pxValue)
