@@ -1,4 +1,4 @@
-# code 03-02
+# self study
 
 def insert_data(idx, pokemon):
     if idx < 0 or idx > len(pokemons):
