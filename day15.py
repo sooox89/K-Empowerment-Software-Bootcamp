@@ -20,6 +20,18 @@ def delete_data(idx):
         return
 
     len_pokemons = len(pokemons)
+    pokemons[idx] = None
+    for _ in range(len_pokemons - idx):
+        pokemons.pop()
+
+
+    # for i in range(idx + 1, len_pokemons):
+    #     pokemons[i - 1] = pokemons[i]
+    #     pokemons[i] = None
+    #
+    # del (pokemons[len_pokemons - 1])
+    # pokemons.pop()
+
 
     # for i in range(idx+1,len_pokemons):
     #     pokemons[i] = None  # 데이터 삭제
@@ -42,3 +54,13 @@ if __name__ == "__main__":
     # delete_data(3)
     #
     # print(pokemons)
+
+
+
+
+
+
+
+
+
+
