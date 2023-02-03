@@ -1,47 +1,48 @@
-# code 03-06
-def print_poly(px, tx):
-    """
-    다항식을 포맷에 맞게 출력하는 함수
-    :param px: 계수를 원소로 가지고 있는 list
-    :param tx: 차수를 원소로 가지고 있는 list
-    :return: 다항식 문자열
-    """
-    poly_str = "P(x) = "
+# # 응용예제 1
 
-    for i in range(len(px)):
-        term = tx[i]
-        coef = px[i]
-        if coef >= 0:
-            poly_str = poly_str + "+"
-
-        poly_str = poly_str + f'{coef}x^{term} '
-
-    return poly_str
+# kakao = [('배고파',200),('집가고싶어',150),('피자',90),('어니부기',30),('날룸퍼프',15)]
+# comment_val = int(input("많이 한 말--> "))
+# count_val = int(input("횟수--> "))
+# print(kakao)
 
 
-def calc_poly(x_val, px, tx):
-    """
-    다항식의 산술연산을 하는 함수
-    :param x_val: x값 integer
-    :param px: 계수를 원소로 가지고 있는 list
-    :param tx: 차수를 원소로 가지고 있는 list
-    :return: 다항식 계산 결과 값 integer
-    """
-    return_val = 0
+## 함수 선언 부분 ##
+def find_and_insert_data(friend, k_count) :
+	findPos = -1
+	for i in range(len(katok)) :
+		tuple_pair = katok[i]
+		if k_count >= tuple_pair[1] :
+			findPos = i
+			break
+	if findPos == -1 :
+		findPos = len(katok)
 
-    for i in range(len(px)):
-        term = tx[i]
-        coef = px[i]
-        return_val = return_val + coef * x_val ** term
-
-    return return_val
+	insert_data(findPos, (friend, k_count))
 
 
-px = [3, -4, 5]
-tx = [300, 20, 0]
+def insert_data(position, friend):
+	if position < 0 or position > len(katok):
+		print("데이터를 삽입할 범위를 벗어났습니다.")
+		return
 
+	katok.append(None)	# 빈 칸 추가
+	kLen = len(katok)		# 배열의 현재 크기
+
+	for i in range(kLen - 1, position, -1):
+		katok[i] = katok[i - 1]
+		katok[i - 1] = None
+
+	katok[position] = friend
+
+
+## 전역 변수 선언 부분 ##
+katok = [('다현', 200), ('정연', 150), ('쯔위', 90), ('사나', 30), ('지효', 15)]
+
+## 메인 코드 부분 ##
 if __name__ == "__main__":
-    print(print_poly(px, tx))
 
-    x_value = int(input("X 값 : "))
-    print(calc_poly(x_value, px, tx))
+	while True:
+		data = input("추가할 친구--> ")
+		count = int(input("카톡 횟수--> "))
+		find_and_insert_data(data, count)
+		print(katok)
