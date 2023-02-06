@@ -136,8 +136,10 @@ def makeSquareNumber(odd, even):
     while current.link != head:
         if current.data % 2 == remainder:
             current.data = current.data * current.data
+        if current.link == head:
+            break
         current = current.link
-    current.data = current.data * current.data
+
 
 
 head, current, pre = None, None, None
