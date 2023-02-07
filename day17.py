@@ -27,6 +27,14 @@ node6 = TreeNode()
 node6.data = '선미'
 node3.left = node6
 
+node7 = TreeNode()
+node7.data = '다현'
+node4.right = node7
+
+node8 = TreeNode()
+node8.data = '사나'
+node6.right = node8
+
 def preorder(node) :
 	if node == None:
 		return
@@ -52,10 +60,10 @@ print('전위 순회 : ', end = '')
 preorder(node1)
 print('끝')
 
-print('중위 순회 : ', end = '')
-inorder(node1)
-print('끝')
-
-print('후위 순회 : ', end = '')
-postorder(node1)
-print('끝')
+# print('중위 순회 : ', end = '')
+# inorder(node1)
+# print('끝')
+#
+# print('후위 순회 : ', end = '')
+# postorder(node1)
+# print('끝')
