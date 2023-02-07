@@ -1,75 +1,61 @@
-## 함수 선언 부분 ##
-def is_queue_full() :
-	global SIZE, queue, front, rear
-	if ( (rear + 1) % SIZE == front) :
-		return True
-	else :
-		return False
+class TreeNode:
+	def __init__(self):
+		self.left = None
+		self.data = None
+		self.right = None
 
+node1 = TreeNode()
+node1.data = '화사'
 
-def is_queue_empty() :
-	global SIZE, queue, front, rear
-	if (front == rear) :
-		return True
-	else :
-		return False
+node2 = TreeNode()
+node2.data = '솔라'
+node1.left = node2
 
+node3 = TreeNode()
+node3.data = '문별'
+node1.right = node3
 
-def en_queue(data) :
-	global SIZE, queue, front, rear
-	if (is_queue_full()) :
-		print("큐가 꽉 찼습니다.")
+node4 = TreeNode()
+node4.data = '휘인'
+node2.left = node4
+
+node5 = TreeNode()
+node5.data = '쯔위'
+node2.right = node5
+
+node6 = TreeNode()
+node6.data = '선미'
+node3.left = node6
+
+def preorder(node) :
+	if node == None:
 		return
-	rear = (rear + 1) % SIZE
-	queue[rear] = data
+	print(node.data, end='->')
+	preorder(node.left)
+	preorder(node.right)
 
+def inorder(node):
+	if node == None :
+		return
+	inorder(node.left)
+	print(node.data, end='->')
+	inorder(node.right)
 
-def de_queue() :
-	global SIZE, queue, front, rear
-	if (is_queue_empty()) :
-		print("큐가 비었습니다.")
-		return None
-	front = (front + 1) % SIZE
-	data = queue[front]
-	queue[front] = None
-	return data
+def postorder(node):
+	if node == None :
+		return
+	postorder(node.left)
+	postorder(node.right)
+	print(node.data, end='->')
 
+print('전위 순회 : ', end = '')
+preorder(node1)
+print('끝')
 
-def peek() :
-	global SIZE, queue, front, rear
-	if (is_queue_empty()) :
-		print("큐가 비었습니다.")
-		return None
-	return queue[(front + 1) % SIZE]
+print('중위 순회 : ', end = '')
+inorder(node1)
+print('끝')
 
-## 전역 변수 선언 부분 ##
-SIZE = int(input("큐의 크기를 입력하세요 ==> "))
-queue = [ None for _ in range(SIZE) ]
-front = rear = 0
-
-## 메인 코드 부분 ##
-if __name__ == "__main__" :
-	select = input("삽입(I)/추출(E)/확인(V)/종료(X) 중 하나를 선택 ==> ")
-
-	while (select != 'X' and select != 'x') :
-		if select=='I' or select =='i' :
-			data = input("입력할 데이터 ==> ")
-			en_queue(data)
-			print("큐 상태 : ", queue)
-			print("front : ", front, ", rear : ", rear)
-		elif select=='E' or select =='e' :
-			data = de_queue()
-			print("추출된 데이터 ==> ", data)
-			print("큐 상태 : ", queue)
-			print("front : ", front, ", rear : ", rear)
-		elif select=='V' or select =='v' :
-			data = peek()
-			print("확인된 데이터 ==> ", data)
-			print("큐 상태 : ", queue)
-			print("front : ", front, ", rear : ", rear)
-		else :
-			print("입력이 잘못됨")
-
-		select = input("삽입(I)/추출(E)/확인(V)/종료(X) 중 하나를 선택 ==> ")
-
-	print("프로그램 종료!")
+print('후위 순회 : ', end = '')
+postorder(node1)
+print('끝')
