@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3a47de2-9f2a-4d39-9148-87208e1c87ef" name="Changes" comment="day 17 이진 탐색 트리 삭제 code 08-05">
-      <change afterPath="$PROJECT_DIR$/day16_15mission.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day18.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b3a47de2-9f2a-4d39-9148-87208e1c87ef" name="Changes" comment="day18 CH9 그래프 응용 code 09-05">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day17.py" beforeDir="false" afterPath="$PROJECT_DIR$/day17.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day18.py" beforeDir="false" afterPath="$PROJECT_DIR$/day18.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,7 +316,42 @@
       <option name="project" value="LOCAL" />
       <updated>1675750344950</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="day18 CH9 그래프 self study 9-1&#10;무방향 그래프">
+      <created>1675819662320</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1675819662320</updated>
+    </task>
+    <task id="LOCAL-00034" summary="day18 CH9 그래프 self study 9-1&#10;무방향 그래프">
+      <created>1675819708612</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1675819708612</updated>
+    </task>
+    <task id="LOCAL-00035" summary="day18 CH9 그래프 깊이 우선 탐색&#10;교수님 예제">
+      <created>1675830419303</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1675830419303</updated>
+    </task>
+    <task id="LOCAL-00036" summary="day18 CH9 그래프 너비 우선 탐색 &#10;queue // dequeue">
+      <created>1675831747981</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1675831747981</updated>
+    </task>
+    <task id="LOCAL-00037" summary="day18 CH9 그래프 깊이 우선 탐색&#10;abcdefghi 알고리즘 오류있음 !">
+      <created>1675834266105</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1675834266105</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,10 +391,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test coomit" />
-    <MESSAGE value="pwd" />
-    <MESSAGE value="day 15 liner list 01" />
-    <MESSAGE value="day 15 liner list 01 / code 03-01" />
     <MESSAGE value="day 15 liner list 02 / code 03-02" />
     <MESSAGE value="day 15 liner list 03 / code 03-03" />
     <MESSAGE value="day 15 liner list 04 / self study 3-1" />
@@ -384,6 +412,10 @@
     <MESSAGE value="day 17 이진 트리 순회 code 08-02" />
     <MESSAGE value="day 17 이진 트리 순회 code 08-02&#10;self study" />
     <MESSAGE value="day 17 이진 탐색 트리 삭제 code 08-05" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 17 이진 탐색 트리 삭제 code 08-05" />
+    <MESSAGE value="day18 CH9 그래프 self study 9-1&#10;무방향 그래프" />
+    <MESSAGE value="day18 CH9 그래프 깊이 우선 탐색&#10;교수님 예제" />
+    <MESSAGE value="day18 CH9 그래프 너비 우선 탐색 &#10;queue // dequeue" />
+    <MESSAGE value="day18 CH9 그래프 깊이 우선 탐색&#10;abcdefghi 알고리즘 오류있음 !" />
+    <option name="LAST_COMMIT_MESSAGE" value="day18 CH9 그래프 깊이 우선 탐색&#10;abcdefghi 알고리즘 오류있음 !" />
   </component>
 </project>
