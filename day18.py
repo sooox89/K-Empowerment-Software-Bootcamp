@@ -3,6 +3,7 @@ class Graph():
         self.SIZE = size
         self.graph = [[0 for _ in range(size)]for _ in range(size)]
 
+
 G1= None
 
 G1=Graph(4)
